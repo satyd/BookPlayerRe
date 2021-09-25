@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/container_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.MainActivity">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/goto_player"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/black"
+
+                app:layout_constraintHeight_percent=".6"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/goto_tracklist"
+                style="@style/MainMenuPane"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent=".2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/goto_player"
+                app:layout_constraintWidth_percent=".496"
+
+                >
+
+                <ImageView
+                    android:id="@+id/tracklistImage"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="16dp"
+                    android:src="@drawable/wholesome"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/tracklistImage"
+                    app:layout_constraintStart_toEndOf="@+id/tracklistImage"
+                    app:layout_constraintTop_toTopOf="@+id/tracklistImage">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tracks_text"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/trackAmountView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/track_amount"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/darker_gray"
+                app:layout_constraintHeight_percent=".2"
+                app:layout_constraintWidth_percent=".004"
+                app:layout_constraintEnd_toStartOf="@+id/goto_favorites"
+                app:layout_constraintStart_toEndOf="@+id/goto_tracklist"
+                app:layout_constraintTop_toBottomOf="@+id/goto_player" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/goto_favorites"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                style="@style/MainMenuPane"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent=".2"
+                app:layout_constraintStart_toEndOf="@+id/goto_tracklist"
+                app:layout_constraintTop_toBottomOf="@+id/goto_player"
+                app:layout_constraintWidth_percent=".496">
+
+                <ImageView
+                    android:id="@+id/favoritesImage"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="16dp"
+                    android:src="@drawable/wholesome"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/favoritesImage"
+                    app:layout_constraintStart_toEndOf="@+id/favoritesImage"
+                    app:layout_constraintTop_toTopOf="@+id/favoritesImage">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/favorites_text"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="@string/favorites_amount" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="145dp"
+                android:background="@color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/goto_favorites"
+                app:layout_constraintTop_toTopOf="@+id/goto_tracklist" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/goto_playlists"
+                style="@style/MainMenuPane"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent=".2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/goto_tracklist"
+                app:layout_constraintWidth_percent=".496">
+
+                <ImageView
+                    android:id="@+id/playlistsImage"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="16dp"
+                    android:src="@drawable/wholesome"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/playlistsImage"
+                    app:layout_constraintStart_toEndOf="@+id/playlistsImage"
+                    app:layout_constraintTop_toTopOf="@+id/playlistsImage">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/playlists_text"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/playlists_amount"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/darker_gray"
+                app:layout_constraintHeight_percent=".2"
+                app:layout_constraintWidth_percent=".004"
+                app:layout_constraintEnd_toStartOf="@+id/goto_settings"
+                app:layout_constraintStart_toEndOf="@+id/goto_playlists"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/goto_settings"
+                style="@style/MainMenuPane"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent=".2"
+                app:layout_constraintStart_toEndOf="@+id/goto_playlists"
+                app:layout_constraintTop_toBottomOf="@+id/goto_favorites"
+                app:layout_constraintWidth_percent=".496">
+
+                <ImageView
+                    android:id="@+id/settingsImage"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="16dp"
+                    android:src="@drawable/wholesome"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_text"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/settingsImage"
+                    app:layout_constraintStart_toEndOf="@+id/settingsImage"
+                    app:layout_constraintTop_toTopOf="@+id/settingsImage" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</layout>

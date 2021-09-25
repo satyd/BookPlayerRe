@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">BookPlayer</string>
+    <string name="add_bookmark">Add Bookmark</string>
+    <string name="tracks_text">Tracks</string>
+    <string name="track_amount">Amount: ?</string>
+    <string name="settings_text">Settings</string>
+    <string name="favorites_text">Favorites</string>
+    <string name="playlists_text">Playlists</string>
+    <string name="add_to_playlist">add to playlist</string>
+    <string name="add_to_favorites">add to favorites</string>
+    <string name="time_elapsed">0:00</string>
+    <string name="favorites_amount">Amount: 0</string>
+    <string name="playlists_amount">Amount: 0</string>
+    <string name="load_tracks_descr">load tracks</string>
+    <string name="search_for_track_descr">search for track</string>
+    <string name="tracklist_text">Tracklist</string>
+    <string name="track_name_txtV">track name</string>
+    <string name="artist_name_txtV">artist</string>
+</resources>
